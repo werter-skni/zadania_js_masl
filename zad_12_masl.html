@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="color:green;font-size:50px;">
+        <script language="JavaScript">
+            var d1_mas=prompt("Data1=","");
+            var d2_mas=prompt("Data1=","");
+            var g1_mas=prompt("godzina1=","");
+            var g2_mas=prompt("godzina1=","");
+            var dsekund;
+            var gsekund;
+            var a=parseFloat(d1_mas);
+            var b=parseFloat(d2_mas);
+            var c=parseFloat(g1_mas);
+            var d=parseFloat(g2_mas);
+            dsekund=(a-b)*24*60*60+(c-d)*60*60;
+            
+            document.write("Ilośc sekund między dniami"+ a +" i "+ b +" = "+ dsekund +"<br>");
+            function okno_zamknij_masl()
+            {
+                window.close()
+            }
+        </script>
+        </div>
+        <input type="button"  value="zamknij okno" onclick="okno_zamknij_masl()"/>
+    </body>
+</body>
+</html>
