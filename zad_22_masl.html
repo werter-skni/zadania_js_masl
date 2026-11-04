@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie_22_Maslii</title>
+    <script lang="JavaScript">
+        function Pole(A,B){
+            a_liczba = parseFloat(A);
+            b_liczba = parseFloat(B);
+            Pole_wynik = a_liczba * b_liczba;
+            document.getElementsByName('pole')[0].value=Pole_wynik.toFixed(2);
+            alert("Pole="+Pole_wynik.toFixed(2)+"cm^2");
+            pokaz1.innerHTML="Pole = "+Pole_wynik.toFixed(2)+"cm^2";
+        }
+        function Obwod(A,B) { 
+            a_liczba=parseFloat(A);
+            b_liczba=parseFloat(B);
+            Obwod_wynik= a_liczba *2 + b_liczba*2 ;
+            document.getElementsByName('obwod')[0].value=Obwod_wynik.toFixed(2); 
+            alert("Obwod="+Obwod_wynik.toFixed(2)+" cm^2"); 
+            pokaz2.innerHTML="Obwod="+Obwod_wynik.toFixed(2)+"cm"; 
+        } 
+    </script>
+</head>
+<body>
+    <form  onsubmit="Pole(this.A.value, this.B.value); Obwod(this.A.value,this.B.value); return false"> 
+        Podaj długosc boku a = <input size="6" name="A">
+        <br><br>      
+        Podaj długosc boku b = <input size="6" name="B">
+        <br> <br> 
+        <input TYPE="submit" Value="oblicz">
+        <br> <br>
+        Pole = <input size="6" name="pole">
+        <br> <br>
+        Obwod = <input size="6" name="obwod">
+    </form>
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+</body>
+</html>

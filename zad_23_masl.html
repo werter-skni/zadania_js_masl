@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+    <script>
+        function C(D, X) {
+            d_liczba = parseFloat(D);
+            x_liczba = parseFloat(X);
+            c_wynik = Math.sqrt(Math.pow(d_liczba, 2) + Math.pow(x_liczba, 2));
+            document.getElementsByName('pole')[0].value = c_wynik.toFixed(2);
+        }
+        function Alfa(D, X) {
+            d_liczba = parseFloat(D);
+            x_liczba = parseFloat(X);
+            alfa_wynik = Math.atan(d_liczba / x_liczba) * 180 / Math.PI;
+            document.getElementsByName('obwod')[0].value = alfa_wynik.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form  onsubmit="C(this.D.value, this.X.value); Alfa(this.D.value,this.X.value); return false"> 
+            Podaj wysokość oparcia drabiny = <input size="6" name="D">
+            <br><br>      
+            Podaj odległość oparcia drabiny = <input size="6" name="X">
+            <br> <br> 
+            <input TYPE="submit" Value="oblicz">
+            <br> <br>
+            dlugość drabiny = <input size="6" name="pole">
+            <br> <br>
+            kąt nachylenia = <input size="6" name="obwod">
+            </form>
+    </div>
+</body>
+</html>

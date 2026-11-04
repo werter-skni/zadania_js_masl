@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="text/javascript">
+        /*blok wejscia danych */
+        var No = parseInt(prompt("Podaj liczbe poczatkowa atomow: ",""));
+        var t =  parseInt(prompt("Podaj ile lat przeszlo: ",""));
+        var T1_2 = parseInt(prompt("Podaj okres polowicznego zaniku: ",""));
+        function lambda() {
+            Lambda = Math.LN2 / T1_2 ;
+            document.write("<font color='blue'>Lambda: "+ Lambda.toFixed(7)+"<br></font>");
+        }
+        function N(){
+            n = No * Math.exp(-Lambda*t);
+            document.write("<font color='blue'>Liczba atomow po czasie t: "+ n.toFixed(7)+"<br></font>");
+        }
+        lambda(T1_2);
+        N();
+        document.write("<font color='blue'>N0="+No+"[sztuk]<br></font>");
+        document.write("<font color='blue'>t="+t+"[lat]<br></font>");
+        document.write("<font color='blue'>T1/2="+T1_2+"[lat]<br></font>");
+        document.write("<font color='blue'>N(t)="+n.toFixed(7)+"[sztuk]<br></font>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+    </textarea>
+</body>
+</html>

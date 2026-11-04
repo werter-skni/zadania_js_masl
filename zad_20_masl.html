@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <script type="text/javascript">
+            var Ax=parseInt(prompt("Podaj wspolrzedna Ax:",""));
+            var Ay=parseInt(prompt("Podaj wspolrzedna Ay:",""));
+            var Bx=parseInt(prompt("Podaj wspolrzedna Bx:",""));
+            var By=parseInt(prompt("Podaj wspolrzedna By:","")); 
+            var Cx=parseInt(prompt("Podaj wspolrzedna Cx:",""));
+            var Cy=parseInt(prompt("Podaj wspolrzedna Cy:",""));
+            //document.write("hello world! \n");
+            function AB_masl()
+            {
+            var AB= Math.sqrt((Ax-Bx)*(Ax-Bx)+(Ay - By)*(Ay - By));
+            document.write("AB = "+AB.toFixed(2)+"<br>");
+            }
+            function BC_masl()
+            {
+            var BC= Math.sqrt((Bx-Cx)*(Bx-Cx)+(By - Cy)*(By - Cy));
+            document.write("BC = "+BC.toFixed(2)+"<br>");
+            }
+            function AC_masl()
+            {
+            var AC= Math.sqrt((Ax-Cx)*(Ax-Cx)+(Ay - Cy)*(Ay - Cy));
+            document.write("AC = "+AC.toFixed(2)+"<br>");
+            }
+            AB_masl();
+            BC_masl();
+            AC_masl();
+        </script>
+    </div>
+    
+</body>
+</html>

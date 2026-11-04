@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Pow_maslii(A,B,h){
+            a_liczba = parseFloat(A);
+            b_liczba = parseFloat(B);
+            h_liczba = parseFloat(h);
+            Pole_wynik = (a_liczba + b_liczba) * h_liczba / 2;
+            document.getElementsByName('pole')[0].value=Pole_wynik.toFixed(2);
+            alert("Pole trapezu="+Pole_wynik.toFixed(2)+"cm^2");
+        }
+        function Obw_maslii(A,B,h) {
+            a_liczba=parseFloat(A);
+            b_liczba=parseFloat(B);
+            h_liczba=parseFloat(h);
+            Obwod_wynik= a_liczba + b_liczba + 2 * Math.sqrt(Math.pow((b_liczba - a_liczba)/2,2) + Math.pow(h_liczba,2));
+            document.getElementsByName('obwod')[0].value=Obwod_wynik.toFixed(2);
+            alert("Obwod trapezu="+Obwod_wynik.toFixed(2)+" cm");
+        }   
+    </script>
+</head>
+<body>
+    <form action="..." onsubmit="Pow_maslii(this.a.value, this.b.value, this.h.value); Obw_maslii(this.a.value, this.b.value, this.h.value); return false">
+        podaj krotsza podtsawe trapezu: <input type="text" name="a">
+        <br><br>
+        podaj dluzsza podstawe trapezu: <input type="text" name="b">
+        <br><br>
+        podaj wysokosc trapezu: <input type="text" name="h">
+        <br><br>
+        <input type="submit" value="oblicz">
+        <br><br>
+        pole trapezu = <input type="text" name="pole">
+        <br><br>
+        obwod trapezu = <input type="text" name="obwod">
+    </form>
+</body>
+</html>
