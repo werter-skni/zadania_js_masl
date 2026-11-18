@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 32 – Maslii KOD</title>
+</head>
+<body>
+    <textarea>
+        <!DOCTYPE html>
+<html lang="pl">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 32 – Maslii</title>
+    <script>
+        function okno_zamknij_maslii() { 
+            window.close(); 
+        }
+    </script>
+</head>
+<body bgcolor="yellow">
+    <div style="color:green;font-size:46px;">
+        <script type="text/javascript">
+            function monitor(marka_m,cena_m,typ_matrycy_m) 
+            {
+                this.marka=marka_m;
+                this.cena=cena_m;
+                this.typ_matrycy=typ_matrycy_m;
+            } 
+            monitor.prototype.wypisz = function () 
+            {
+                alert(this.marka + " " + this.cena + " " + this.typ_matrycy)
+            };
+            var monitor1 = new monitor("samsung", 998, "OLED"); 
+            var monitor2 = new monitor("lenovo", 500, "TN"); 
+
+            monitor1.wypisz(); 
+            monitor2.wypisz(); 
+
+            document.write("Moje nazwisko to Maslii mam numer 10 a obiekt to monitor"+"<br>");
+            document.write("dostęp do pól monitor1 i monitor2"+"<br>");
+            document.write("czyli wypisanie danych"+"<br>");
+            document.write("monitor pierwszy =>"+" "+monitor1.marka+" "+monitor1.cena+" "+monitor1.typ_matrycy+"<br>");
+            document.write("monitor drugi  =>"+" "+monitor2.marka+" "+monitor2.cena+" "+monitor2.typ_matrycy+"<br>");
+        </script>
+    </div>
+    <div style="color:blue;font-size:27px;"><br>
+        programowanie obiektowe:<br>
+        Słowo kluczowe prototype stosowane jest do:<br>
+        dodawania nowych metod (lub właściwości) do już istniejącego konstruktora – dzięki temu wszystkie obiekty<br>
+        utworzone tym konstruktorem (np. pudelko1, pudelko2) mają dostęp do tej samej metody wypisz() bez potrzeby<br>
+        wpisywania jej w każdym obiekcie osobno. Oszczędza to pamięć i pozwala na wspólną definicję zachowania<br>
+        Słowo kluczowe new stosowane jest do:<br>
+        tworzenia nowej instancji (nowego obiektu) na podstawie konstruktora, np. new pudelko("pudelko","karton","brązowy")<br>
+        – powoduje wywołanie konstruktora, utworzenie nowego obiektu oraz przypisanie do jego pól wartości przekazanych<br>
+        w argumentach. Wynik zapisujemy w zmiennej (np. pudelko1, pudelko2)<br>
+    </div>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_maslii()">
+</body>
+</html>
+    </textarea>
+</body>
+</html>
