@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 28 Maslii</title>
+<style>
+        *{
+            font-family:'Courier New', Courier, monospace;
+        }
+        ol{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        ul, p{
+            font-weight: normal;
+            list-style-type: disc;
+        }
+    </style>
+    <script>
+        function okno_zamknij()
+            {
+                window.close()
+            }
+    </script>
+</head>
+<body>
+    <ol>
+        <li>
+            Rodzaje „filozofii” programowania.
+            <p>Wyróżniamy dwa główne rodzaje paradygmatów („filozofii”) programowania:</p>
+            <ul>
+                <li>Programowanie strukturalne</li>
+                <li>Programowanie obiektowe</li>
+            </ul><br>
+        </li>
+        <li>
+            Opisz paradygmat programowania strukturalnego. Założenia programowania strukturalnego.
+            <p><u>Programowanie strukturalne</u> to paradygmat programowania opierający się na podziale 
+                kodu źródłowego programu na procedury i hierarchicznie ułożone bloki z wykorzystaniem 
+                struktur kontrolnych w postaci instrukcji wyboru i pętli. Zwiększa ono czytelność i 
+                ułatwia analizę programów, co stanowi znaczącą poprawę w stosunku do trudnego w utrzymaniu 
+                „spaghetti code” często wynikającego z użycia instrukcji goto.</p>
+            <ul>
+                <li>Podzielone bloki kodu mają jeden punkt wejścia (mogą mieć wiele punktów wyjścia).</li><br>
+                <li>Wykonywanie wyrażeń w określonej kolejności.</li><br>
+                <li>Używanie instrukcji warunkowych (if, if else).</li><br>
+                <li>Używanie pętli (for, while, do while).</li><br>
+                <li>Unikanie instrukcji skoku (goto).</li><br>
+                <li>Unikanie instrukcji break, continue.</li><br>
+                <li>W programowaniu proceduralnym (strukturalnym) funkcje i zmienne opisujące dany przedmiot nie są ze sobą powiązane.</li><br>
+            </ul>
+        </li>
+        <li>
+            Programowanie obiektowe: definicja 
+           <p>Programowanie obiektowe to sposób programowania, którego angielski skrót to OOP 
+            (od object-oriented programming). W tym paradygmacie programy definiuje się za pomocą 
+            obiektów, które są powoływane do życia wirtualnego przez programistę i mogą być przez 
+            niego kasowane (przykładem takiego obiektu jest okienko w systemie Windows). Każdy obiekt 
+            posiada określony stan, czyli dane, które w programowaniu obiektowym nazywa się najczęściej 
+            polami (przykładem może być wielkość okienka). Obiekt wykazuje również pewne zachowanie, 
+            co oznacza, że posiada procedury nazywane metodami (np. zdefiniowana metoda służąca do 
+            zmiany wielkości okienka). Końcową konkluzją jest to, że obiektowy program komputerowy 
+            stanowi zbiór takich właśnie obiektów, które komunikują się pomiędzy sobą w celu wykonywania 
+            określonych zadań.</p>
+        </li>
+        <li>
+            Dlaczego stosujemy programowanie obiektowe?
+            <p>Stosujemy je z następujących powodów:</p>
+            <ul>
+                <li>Jest to bardziej naturalne podejście dla programisty, ponieważ otaczający 
+                    nas świat to różnego rodzaju przedmioty. Tworząc program, dokonujemy ich 
+                    odwzorowania (np. definiujemy obiekt samochód, jego pola: rok produkcji, 
+                    marka, kolor; oraz metody: hamowanie, przyśpieszanie).</li><br>
+                <li>Pozwala na lepsze gospodarowanie pamięcią komputera, ponieważ gdy obiekt 
+                    staje się zbędny, możemy go usunąć, co zwalnia pamięć (w przeciwieństwie 
+                    do programowania strukturalnego, gdzie trzeba stosować dynamiczne struktury danych).</li><br>
+                <li>Dobrze napisana i przetestowana klasa pozwala na stosowanie jej przez 
+                    innych programistów, co oszczędza czas i środki pieniężne.</li><br>
+                <li>Dokonuje się powiązania metod (funkcji) z danymi (zmiennymi) definiującymi 
+                    przedmiot – wszystko grupuje się w tzw. klasie.</li><br>
+            </ul>
+        </li>
+        <li>
+            Omów następujące pojęcia
+            <ul>
+                <li><u><b>Klasa</b></u> (ang. "class"): Rodzaj foremki, która opisuje nam jak będą wyglądać 
+                    tworzone na jej podstawie nowe obiekty. Złożony typ będący opisem (definicją) 
+                    obiektu/obiektów wraz z definicją pól i metod.</li><br>
+                <li><u><b>Obiekt</b></u> (ang. "object"): Instancja (byt, twór), który powstał na podstawie klasy. 
+                    Konstrukcja programistyczna mająca właściwości (pola obiektu).</li><br>
+                <li><u><b>Właściwość</b></u> (ang. "property"): Własność obiektu, np. kolor.</li><br>
+                <li><u><b>Metoda</b></u> (ang. "method"): Zdolność (czynność), którą umie wykonywać obiekt, 
+                    np. chodzenie (idź). Realizowana w postaci konstrukcji podobnej do funkcji.</li>    <br>
+                <li><u><b>Konstruktor</b></u> (ang. "constructor"): Metoda wywoływana w momencie inicjalizacji 
+                    obiektu. Np. przy tworzeniu obiektu uruchomi się metoda, która nada Imię i Nazwisko.</li>  <br> 
+                <li><u><b>Dziedziczenie</b></u> (ang. "inheritance"): Klasa może dziedziczyć własności od innej 
+                    klasy. Tworzymy klasę na podstawie innej klasy, pobierając od „rodzica” 
+                    właściwości i metody, możemy dopisać nowe pola i nowe metody.</li> <br>
+                <li><u><b>Hermetyzacja</b></u> (lub enkapsulacja - ang. "encapsulation"): Wewnątrz ciała 
+                    klasy znajdują się pola i metody. Część pól i metod można odpowiednio 
+                    ukryć przed "zewnętrznym światem" klasy, tak jak to ma miejsce z przedmiotami 
+                    ze świata rzeczywistego.</li><br>
+                <li><u><b>Polimorfizm</b></u> (ang. "polymorphism"): Wielopostaciowość. Oznacza, że dany obiekt 
+                    może zmieniać swoją postać w zależności od potrzeb. Może to być realizowane w 
+                    formie metody wywoływanej z różną ilością parametrów. Obiekt zachowuje się 
+                    różnie w zależności od sposobu uruchamiania jego metody.</li><br>
+            </ul>
+        </li>
+    </ol>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
